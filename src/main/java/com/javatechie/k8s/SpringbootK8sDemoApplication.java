@@ -13,6 +13,10 @@ public class SpringbootK8sDemoApplication {
 	public String displayMessage(){
 		return "Testing Java project in EC2 Instance... ";
 	}
+	@GetMapping("/msg")
+	public String displayMessage1(){
+		return "Testing Java project message22222222222 ";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootK8sDemoApplication.class, args);
