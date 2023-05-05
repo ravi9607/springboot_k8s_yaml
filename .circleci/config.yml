@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+  java: circleci/openjdk@1.0.0
+
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - java/install
+      - run: chmod +x mvnw
+      - run: ./mvnw clean install -DskipTests=false
+
+workflows:
+  build:
+    jobs:
+      - build
