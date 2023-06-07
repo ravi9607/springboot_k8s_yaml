@@ -17,6 +17,10 @@ public class SpringbootK8sDemoApplication {
 	public String displayMessage1(){
 		return "Testing Java project message22222222222 ";
 	}
+	@GetMapping("/msg1")
+	public String displayMessage2(){
+		return "Testing Java project message11111111111111111111111111111 ";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootK8sDemoApplication.class, args);
